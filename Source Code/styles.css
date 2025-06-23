@@ -1,0 +1,35 @@
+/* Center the loader on the page */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #121212;
+}
+
+/* Loader style */
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 10px solid rgba(52, 152, 219, 0.2); /* light blue transparent */
+  border-top: 10px solid #3498db; /* bright blue */
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite, pulseGlow 3s ease-in-out infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Glow pulse animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px #3498db, 0 0 20px #2980b9;
+  }
+  50% {
+    box-shadow: 0 0 20px #3498db, 0 0 40px #2980b9;
+  }
+}
